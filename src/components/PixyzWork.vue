@@ -52,8 +52,7 @@
               assessment. If a similar task was completed earlier, it becomes
               easier to give an accurate estimate, and time tracking becomes our
               recommendation. From the previous step, we can collect all the
-              pieces that we are going to collect from end to end. For each
-              task, we analyze its complexity and make a classification.
+              pieces that we are going to collect from end to end.
             </p>
           </div>
         </div>
@@ -140,6 +139,7 @@ export default {};
     p {
       font-family: "Seg";
       font-size: 24px;
+      line-height: 32px;
       color: #8a8a8a;
     }
   }

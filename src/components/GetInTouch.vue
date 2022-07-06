@@ -118,11 +118,10 @@ export default {};
     padding: 16px 60px;
     color: #ffffff;
     background: #49d6cb;
-    border: none;
+     border: 1px solid #49d6cb;
     cursor: pointer;
 
     &:hover {
-      border: 1px solid #49d6cb;
       color: #49d6cb;
       background: #ffffff;
     }

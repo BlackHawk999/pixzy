@@ -9,6 +9,9 @@
             analysts excel in every technology powering native, hybrid, cross-
             platform and custom software development.
           </p>
+          <div class="round-img-wrapper">
+            <img src="@/assets/img/round.png" alt="" />
+          </div>
         </div>
         <div class="technologies">
           <div class="techno-type">
@@ -86,6 +89,7 @@ export default {};
   padding: 100px 0;
 
   .techno-title {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -102,6 +106,14 @@ export default {};
       font-family: "Seg";
       font-size: 24px;
       color: #8a8a8a;
+    }
+
+    .round-img-wrapper {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      transform: translate(-15%);
+      z-index: -1;
     }
   }
 

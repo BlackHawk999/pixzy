@@ -65,6 +65,9 @@ export default {
   mounted() {
     window.addEventListener("scroll", this.updateScroll);
   },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.updateScroll);
+  },
 };
 </script>
 
@@ -83,7 +86,7 @@ export default {
 
   &-wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 

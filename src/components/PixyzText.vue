@@ -63,7 +63,7 @@ export default {};
 
   &-text {
     font-family: "Seg";
-    font-size: 24px;
+    font-size: 20px;
     line-height: 32px;
     color: #8a8a8a;
   }
