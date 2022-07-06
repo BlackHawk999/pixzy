@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <intro />
+    <pixyz-text />
+    <pixyz-service />
+    <pixyz-work />
+    <pixzy-techno />
+    <pixzy-testimonials />
+    <get-in-touch />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import GetInTouch from "../components/GetInTouch.vue";
+import Intro from "../components/Intro.vue";
+import PixyzService from "../components/PixyzService.vue";
+import PixyzText from "../components/PixyzText.vue";
+import PixyzWork from "../components/PixyzWork.vue";
+import PixzyTechno from "../components/PixzyTechno.vue";
+import PixzyTestimonials from "../components/PixzyTestimonials.vue";
 
 export default {
-  name: 'Home',
   components: {
-    HelloWorld
-  }
-}
+    Intro,
+    PixyzText,
+    PixyzService,
+    PixyzWork,
+    PixzyTechno,
+    PixzyTestimonials,
+    GetInTouch,
+  },
+};
 </script>
+, GetInTouch
