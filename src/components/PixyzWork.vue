@@ -152,7 +152,7 @@ export default {};
   }
 
   .step {
-    font-family: "Seg";
+    font-family: "Arial";
     font-size: 16px;
     padding: 10px 52px;
     color: #ffffff;
@@ -160,6 +160,7 @@ export default {};
     border: 1px solid #49d6cb;
     border-radius: 5px;
     text-decoration: none;
+    text-transform: uppercase;
   }
 }
 </style>

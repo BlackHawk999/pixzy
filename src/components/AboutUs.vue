@@ -17,9 +17,10 @@
             <h6>First Discussion</h6>
             <p>
               The first step is to give an overview of the problem we want to
-              solve and / or our needs. If the needs are not properly
-              understood, this will cause the creation of a web application that
-              is designed for these purposes to fail.
+              solve and / or our needs. If the needs are not properly <br />
+              understood, this will cause the creation of a web application
+              <br />
+              that is designed for these purposes to fail.
             </p>
           </div>
         </div>

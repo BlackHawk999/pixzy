@@ -206,7 +206,7 @@ export default {};
   &-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 46px;
+    gap: 46.3px;
   }
 
   .footer-items {

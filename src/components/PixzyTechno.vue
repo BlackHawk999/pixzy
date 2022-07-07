@@ -127,7 +127,7 @@ export default {};
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85px;
+    width: 104px;
     height: 120px;
     gap: 10px;
     border-radius: 10px;

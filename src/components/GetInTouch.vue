@@ -7,15 +7,29 @@
             <h5 class="get-touch-title">Get in Touch</h5>
             <div class="input-wrapper">
               <input type="text" placeholder="Name" />
-              <input type="text" placeholder="Surname" />
+              <input type="text" placeholder="Last Name" />
             </div>
             <div class="input-wrapper">
               <input type="email" placeholder="Email" />
-              <input type="number" placeholder="Surname" />
+              <input type="tel" placeholder="Phone/Telegram" />
             </div>
             <div class="input-wrapper">
-              <input type="email" placeholder="Email" />
-              <input type="number" placeholder="Surname" />
+              <select class="select">
+                <option class="holder" value="" disabled selected>
+                  I am interested in
+                </option>
+                <option value="">Accaunting</option>
+                <option value="">IT</option>
+                <option value="">Marketing</option>
+              </select>
+              <select class="select">
+                <option class="holder" value="" disabled selected>
+                  Select Project Budget in USD
+                </option>
+                <option value="">100$</option>
+                <option value="">500$</option>
+                <option value="">1000$</option>
+              </select>
             </div>
             <div class="area-wrapper">
               <textarea
@@ -67,8 +81,8 @@ export default {};
     display: flex;
     flex-direction: column;
     width: 60%;
-    padding: 60px;
-    gap: 22px;
+    padding: 54px 57px 36px 66px;
+    gap: 26px;
   }
 
   .get-touch-title {
@@ -83,7 +97,29 @@ export default {};
     align-items: center;
     gap: 30px;
 
+    .select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      background-image: url(../assets/img/select-arrow.svg);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 12px) center !important;
+      font-family: "Arial";
+      font-size: 16px;
+      padding: 18px 0 20px 28px;
+      border: 1px solid #49d6cb;
+      width: 100%;
+      color: #c9c9c9;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
     input {
+      font-family: "Arial";
+      font-size: 16px;
       padding: 18px 0 20px 28px;
       border: 1px solid #49d6cb;
       width: 100%;
@@ -92,17 +128,28 @@ export default {};
         outline: none !important;
         border: 1px solid #ff8888;
       }
+
+      &::placeholder {
+        color: #c9c9c9;
+      }
     }
   }
 
   .area {
+    font-family: "Arial";
+    font-size: 16px;
     border: 1px solid #49d6cb;
     width: 100%;
     padding: 16px 25px;
+    color: #c9c9c9;
 
     &:focus {
       outline: none !important;
       border: 1px solid #ff8888;
+    }
+
+    &::-webkit-input-placeholder {
+      color: #c9c9c9;
     }
   }
 
@@ -110,6 +157,7 @@ export default {};
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 10px;
   }
 
   .submit {
@@ -118,7 +166,7 @@ export default {};
     padding: 16px 60px;
     color: #ffffff;
     background: #49d6cb;
-     border: 1px solid #49d6cb;
+    border: 1px solid #49d6cb;
     cursor: pointer;
 
     &:hover {
@@ -145,6 +193,7 @@ export default {};
     .contact-infos {
       display: flex;
       flex-direction: column;
+      align-items: flex-end;
       width: 100%;
       height: 100%;
 
@@ -162,11 +211,6 @@ export default {};
     }
 
     .get-touch-img {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      width: 100%;
-      height: 600px;
     }
   }
 }

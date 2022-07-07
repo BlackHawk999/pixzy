@@ -72,9 +72,9 @@ export default {};
     position: absolute;
     top: 50%;
     right: 50%;
-    transform: translate(50%, 45%);
+   transform: translate(50%, 25%);
     z-index: 2;
-    height: 300px;
+    height: 360px;
 
     img {
       width: 100%;
