@@ -112,11 +112,12 @@ export default {};
     right: 5%;
     width: 58px;
     height: 58px;
-    padding: 17px 11px 11px 17px;
+    padding: 17px 15px 15px 20px;
     border-radius: 50%;
     color: rgba(12, 180, 166, 0.35);
     background: #49d6cb;
     box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
+    cursor: pointer;
     animation: pulse 1s infinite;
 
     svg {

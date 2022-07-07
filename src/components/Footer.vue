@@ -200,6 +200,8 @@ export default {};
 .footer {
   padding: 44px 0 114px 0;
   background: #f4f6fc;
+  position: relative;
+  z-index: 1111;
 
   &-wrapper {
     display: flex;

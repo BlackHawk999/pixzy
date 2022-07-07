@@ -1,15 +1,14 @@
 <template>
   <div class="about">
-    <h4>dfvdfv</h4>
+    <about-us />
   </div>
 </template>
 
 <script>
+import AboutUs from "../components/AboutUs.vue";
 export default {
-
-}
+  components: { AboutUs },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
