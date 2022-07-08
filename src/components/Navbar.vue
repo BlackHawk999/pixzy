@@ -12,7 +12,7 @@
           <router-link class="menu" to="/about" exact-active-class="active"
             >ABOUT US</router-link
           >
-          <router-link class="menu" to="/service" exact-active-class="active"
+          <router-link class="menu" to="/services" exact-active-class="active"
             >SERVICES</router-link
           >
           <router-link class="menu" to="/portfolio" exact-active-class="active"
