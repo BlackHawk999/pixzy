@@ -47,7 +47,6 @@ export default {};
 
 <style lang="scss" scoped>
 .intro {
-  position: relative;
   display: flex;
   background-image: url(../assets/img/intro-back.png);
   background-repeat: no-repeat;
@@ -58,6 +57,7 @@ export default {};
   min-height: 100vh;
 
   &-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,8 +108,8 @@ export default {};
 
   .icon-phone {
     position: absolute;
-    bottom: 0;
-    right: 5%;
+    bottom: 7%;
+    right: 0;
     width: 58px;
     height: 58px;
     padding: 17px 15px 15px 20px;

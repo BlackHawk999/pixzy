@@ -227,7 +227,7 @@ export default {};
     }
 
     p {
-      width: 40%;
+      width: 60%;
       font-family: "Seg";
       font-size: 16px;
       line-height: 21px;
@@ -238,7 +238,7 @@ export default {};
   .links {
     display: flex;
     align-items: center;
-    margin-top: 26px;
+    margin-top: 34px;
     gap: 9.6px;
   }
 

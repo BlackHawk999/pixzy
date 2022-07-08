@@ -56,7 +56,8 @@
               assessment. If a similar task was completed earlier, it becomes
               easier to give an accurate estimate, and time tracking becomes our
               recommendation. From the previous step, we can collect all the
-              pieces that we are going to collect from end to end.
+              pieces that we are going to collect from end to end. For each
+              task, we analyze its complexity and make a classification.
             </p>
           </div>
         </div>
@@ -152,7 +153,8 @@ export default {};
 
 <style lang="scss" scoped>
 .aboutus {
-  padding: 100px 0;
+  padding: 71px 0;
+
   &-wrapper {
     display: flex;
     flex-direction: column;
@@ -168,53 +170,87 @@ export default {};
   }
 
   .arrow {
-    position: absolute;
-    top: 80px;
-    left: 50%;
-    transform: translate(-25%, -50%);
-
     &.first {
       position: absolute;
-      top: -10%;
+      top: 0;
       left: 35%;
-      transform: translate(-35%, -50%);
+      transform: translate(-37%, -60%);
+      width: 1080px;
+      height: 285px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &.second {
       position: absolute;
-      top: 50px;
+      top: 32px;
       left: 50%;
-      transform: translate(0%, -50%);
+      transform: translate(-22%, -50%);
+      height: 275px;
+      width: 535px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &.third {
       position: absolute;
       top: -5%;
       left: 25%;
-      transform: translate(-25%, -50%);
+      transform: translate(-17%, -50%);
+      width: 1100px;
+      height: 315px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &.fourth {
       position: absolute;
       top: -5%;
       left: 50%;
-      transform: translate(-25%, -50%);
+      transform: translate(-42%, -45%);
+      width: 685px;
+      height: 290px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &.fiveth {
       position: absolute;
       top: 5%;
       left: 30%;
-      transform: translate(-25%, -50%);
+      transform: translate(-25%, -55%);
+      height: 280px;
+      width: 1050px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     &.sixth {
       position: absolute;
       top: 25px;
       left: 45%;
-      transform: translate(-15%, -50%);
+      transform: translate(-25%, -60%);
+      height: 335px;
+      width: 235px;
+
       img {
-        height: 450px;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -223,8 +259,8 @@ export default {};
     position: relative;
     display: flex;
     align-items: center;
-    gap: 100px;
-    padding: 100px 0;
+    gap: 169.5px;
+    padding: 73.3px 0;
 
     &.reverse {
       flex-direction: row-reverse;
@@ -250,6 +286,7 @@ export default {};
   .discuss-title {
     display: flex;
     flex-direction: column;
+    width: 48%;
     gap: 32px;
 
     h6 {
