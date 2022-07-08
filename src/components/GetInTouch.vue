@@ -45,9 +45,9 @@
           </form>
           <div class="get-touch-contact">
             <div class="contact-infos">
-              <h6>Say Hi</h6>
-              <a href="#">info@pixyz.com</a>
-              <a href="#">+998 71 645 57 67</a>
+              <h6 class="title">Say Hi</h6>
+              <a class="mail" href="#">info@pixyz.com</a>
+              <a class="tel" href="#">+998 71 645 57 67</a>
               <a href="#">Telegram</a>
             </div>
             <div class="get-touch-img">
@@ -80,7 +80,7 @@ export default {};
   .get-touch-body {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    flex: 1;
     padding: 54px 57px 36px 66px;
     gap: 26px;
   }
@@ -178,9 +178,9 @@ export default {};
   .get-touch-contact {
     display: flex;
     align-items: flex-start;
-    flex: 1;
+    min-width: 480px;
     background: #49d6cb;
-    padding: 57px 23px 11px 77px;
+    position: relative;
 
     h6 {
       font-family: "Seg-bold";
@@ -191,11 +191,12 @@ export default {};
     }
 
     .contact-infos {
+      position: absolute;
+      top: 16%;
+      left: 0;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      width: 100%;
-      height: 100%;
 
       a {
         font-family: "Seg";
@@ -208,9 +209,24 @@ export default {};
           margin-bottom: 60px;
         }
       }
+
+      .title {
+        transform: translateX(20%);
+      }
+
+      .mail {
+        transform: translateX(35%);
+      }
+
+      .tel {
+        transform: translateX(45%);
+      }
     }
 
     .get-touch-img {
+      position: absolute;
+      bottom: 2%;
+      right: 5%;
     }
   }
 }
