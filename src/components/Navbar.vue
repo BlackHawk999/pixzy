@@ -3,7 +3,7 @@
     <div class="container">
       <div class="navbar-wrapper">
         <div class="logo-wrapper">
-          <img src="@/assets/img/logo.png" alt="" />
+          <img @click="$router.push('/')" src="@/assets/img/logo.png" alt="" />
         </div>
         <div class="menu-wrapper">
           <router-link class="menu" to="/" exact-active-class="active"
@@ -88,6 +88,12 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .logo-wrapper {
+    img {
+      cursor: pointer;
+    }
   }
 
   .menu-wrapper {

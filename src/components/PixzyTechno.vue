@@ -130,6 +130,7 @@ export default {};
     width: 104px;
     height: 120px;
     gap: 10px;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     padding: 25px;
     background: #ffffff;
