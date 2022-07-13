@@ -14,66 +14,12 @@
           </div>
         </div>
         <div class="technologies">
-          <div class="techno-type">
-            <img src="@/assets/img/js.svg" alt="" />
-            <span class="name">Java Script</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/ror.svg" alt="" />
-            <span class="name">ROR</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/python.svg" alt="" />
-            <span class="name">Python</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/spec_13.svg" alt="" />
-            <span class="name">Ruby</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/css.svg" alt="" />
-            <span class="name">CSS 3</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/ruby.svg" alt="" />
-            <span class="name">Ruby</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/java.svg" alt="" />
-            <span class="name">Java</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/android.svg" alt="" />
-            <span class="name">Android</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/react.svg" alt="" />
-            <span class="name">React</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/mysql.svg" alt="" />
-            <span class="name">MySQL</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/xaskell.svg" alt="" />
-            <span class="name">Xaskell</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/in.svg" alt="" />
-            <span class="name">In</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/basecamp.svg" alt="" />
-            <span class="name">BaseCamp</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/laravel.svg" alt="" />
-            <span class="name">Laravel</span>
-          </div>
-          <div class="techno-type">
-            <img src="@/assets/img/aws.svg" alt="" />
-            <span class="name">Aws</span>
-          </div>
+          <techno-type
+            v-for="(techno, idx) in technos"
+            :key="idx"
+            :img-url="techno.imgUrl"
+            :title="techno.title"
+          />
         </div>
       </div>
     </div>
@@ -81,12 +27,42 @@
 </template>
 
 <script>
-export default {};
+import TechnoType from "./TechnoType.vue";
+export default {
+  components: {
+    TechnoType,
+  },
+  data() {
+    return {
+      technos: [
+        { imgUrl: require("@/assets/img/js.svg"), title: "JS" },
+        { imgUrl: require("@/assets/img/python.svg"), title: "Python" },
+        { imgUrl: require("@/assets/img/ror.svg"), title: "ROR" },
+        { imgUrl: require("@/assets/img/spec_13.svg"), title: "Ruby" },
+        { imgUrl: require("@/assets/img/mysql.svg"), title: "MySQl" },
+        { imgUrl: require("@/assets/img/java.svg"), title: "Java" },
+        { imgUrl: require("@/assets/img/in.svg"), title: "IN" },
+        { imgUrl: require("@/assets/img/aws.svg"), title: "AWS" },
+        { imgUrl: require("@/assets/img/laravel.svg"), title: "Laravel" },
+        { imgUrl: require("@/assets/img/basecamp.svg"), title: "BaseCamp" },
+        { imgUrl: require("@/assets/img/xaskell.svg"), title: "Xaskell" },
+        { imgUrl: require("@/assets/img/react.svg"), title: "React" },
+        { imgUrl: require("@/assets/img/android.svg"), title: "Android" },
+        { imgUrl: require("@/assets/img/css.svg"), title: "CSS 3" },
+        { imgUrl: require("@/assets/img/js.svg"), title: "JS" },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .pixzy-techno {
   padding: 100px 0;
+
+  @include breakpoint(lg) {
+    padding: 80px 0;
+  }
 
   .techno-title {
     position: relative;
@@ -95,17 +71,30 @@ export default {};
     gap: 28px;
     margin-bottom: 56px;
 
+    @include breakpoint(lg) {
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
     h5 {
       font-family: "Seg-bold";
       font-size: 40px;
       color: #217a73;
       text-align: center;
+
+      @include breakpoint(lg) {
+        font-size: 35px;
+      }
     }
 
     p {
       font-family: "Seg";
       font-size: 24px;
       color: #8a8a8a;
+
+      @include breakpoint(lg) {
+        font-size: 20px;
+      }
     }
 
     .round-img-wrapper {
@@ -121,6 +110,10 @@ export default {};
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     gap: 35.5px;
+
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(5, 1fr);
+    }
   }
 
   .techno-type {

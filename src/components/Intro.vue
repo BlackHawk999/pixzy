@@ -74,18 +74,31 @@ export default {};
       font-size: 56px;
       color: #000000;
       margin-bottom: 25px;
+
+      @include breakpoint(lg) {
+        font-size: 45px;
+        margin-bottom: 20px;
+      }
     }
 
     .intro-text {
       font-family: "Seg";
       font-size: 24px;
       color: #000000;
+
+      @include breakpoint(lg) {
+        font-size: 22px;
+      }
     }
 
     .title-img-wrapper {
       position: absolute;
       top: 30%;
       left: -10%;
+
+      @include breakpoint(lg) {
+        top: 20%;
+      }
     }
 
     .title-round-wrapper {
@@ -93,6 +106,10 @@ export default {};
       left: 25%;
       bottom: 25%;
       z-index: -1;
+
+      @include breakpoint(lg) {
+        bottom: 5%;
+      }
     }
   }
 
@@ -103,6 +120,11 @@ export default {};
     img {
       width: 100%;
       height: 100%;
+    }
+
+    @include breakpoint(lg) {
+      width: 500px;
+      height: 300px;
     }
   }
 

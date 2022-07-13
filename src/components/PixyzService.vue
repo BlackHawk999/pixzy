@@ -454,6 +454,10 @@ export default {};
     display: flex;
     flex-direction: column;
     margin-bottom: 81px;
+
+    @include breakpoint(lg) {
+      margin-bottom: 50px;
+    }
   }
 
   .service-title {
@@ -462,12 +466,22 @@ export default {};
     color: #217a73;
     text-align: center;
     margin-bottom: 28px;
+
+    @include breakpoint(lg) {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
   }
 
   .service-text {
     font-family: "Seg";
     font-size: 24px;
     color: #7d7d7d;
+    text-align: center;
+
+    @include breakpoint(lg) {
+      font-size: 20px;
+    }
   }
 
   .service-kinds {
@@ -514,6 +528,10 @@ export default {};
       }
     }
 
+    @include breakpoint(lg) {
+      padding: 45px 50px 44px 50px;
+    }
+
     &-icon {
       display: flex;
       align-items: center;
@@ -524,6 +542,10 @@ export default {};
       border-radius: 50%;
       background: #49d6cb;
       margin-bottom: 27px;
+
+      @include breakpoint(lg) {
+        margin-bottom: 20px;
+      }
     }
 
     &-info {
@@ -583,6 +605,10 @@ export default {};
       svg line {
         stroke: #49d6cb;
       }
+    }
+
+    @include breakpoint(lg) {
+      bottom: -18%;
     }
   }
 }

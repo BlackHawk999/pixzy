@@ -52,6 +52,10 @@ export default {};
     flex-direction: column;
     justify-content: center;
     gap: 31px;
+
+    @include breakpoint(lg) {
+      gap: 15px;
+    }
   }
 
   &-title {
@@ -59,6 +63,10 @@ export default {};
     font-size: 40px;
     color: #217a73;
     text-align: center;
+
+    @include breakpoint(lg) {
+      font-size: 35px;
+    }
   }
 
   &-text {
@@ -66,19 +74,29 @@ export default {};
     font-size: 20px;
     line-height: 32px;
     color: #8a8a8a;
+
+    @include breakpoint(lg) {
+      font-size: 16px;
+      line-height: 30px;
+    }
   }
 
   .arrow-line {
     position: absolute;
     top: 50%;
     right: 50%;
-   transform: translate(50%, 25%);
+    transform: translate(50%, 25%);
     z-index: 2;
     height: 360px;
 
     img {
       width: 100%;
       height: 100%;
+    }
+
+    @include breakpoint(lg) {
+      transform: translate(50%, 55%);
+      height: 180px;
     }
   }
 }

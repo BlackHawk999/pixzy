@@ -100,6 +100,17 @@ export default {};
       top: -10%;
       left: 35%;
       transform: translate(-35%, -50%);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include breakpoint(lg) {
+        top: -5%;
+        left: 31%;
+        width: 800px;
+      }
     }
 
     &.pre-down {
@@ -107,6 +118,17 @@ export default {};
       top: 50px;
       left: 50%;
       transform: translate(0%, -50%);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include breakpoint(lg) {
+        top: 40px;
+        left: 45%;
+        height: 240px;
+      }
     }
 
     &.third {
@@ -114,6 +136,16 @@ export default {};
       top: 0;
       left: 50%;
       transform: translate(-5%, -100%);
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include breakpoint(lg) {
+        top: -15px;
+        width: 435px;
+        height: 150px;
+      }
     }
   }
 
@@ -123,6 +155,11 @@ export default {};
     align-items: center;
     gap: 100px;
     padding: 100px 0;
+
+    @include breakpoint(lg) {
+      gap: 55px;
+      padding: 80px 0;
+    }
   }
 
   .discuss-title {
