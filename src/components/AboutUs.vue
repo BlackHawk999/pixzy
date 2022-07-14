@@ -167,6 +167,10 @@ export default {};
     text-align: center;
     color: #217a73;
     margin-bottom: 12px;
+
+    @include breakpoint(md) {
+      font-size: 30px;
+    }
   }
 
   .arrow {
@@ -181,6 +185,26 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(lg) {
+        right: 0;
+        transform: translate(-25%, -60%);
+        width: 765px;
+        height: 205px;
+      }
+
+      @include breakpoint(md) {
+        top: -10px;
+        right: 0%;
+        transform: translate(-36%, -50%);
+        width: 100%;
+        height: 195px;
+      }
+
+      @include breakpoint(sm) {
+        display: none;
       }
     }
 
@@ -195,6 +219,26 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(lg) {
+        top: 0px;
+        left: 50%;
+        transform: translate(-22%, -50%);
+        height: 275px;
+        width: 410px;
+      }
+
+      @include breakpoint(md) {
+        top: 0;
+        transform: translate(-18%, -50%);
+        height: 162px;
+        width: 456px;
+      }
+
+      @include breakpoint(sm) {
+        display: none;
       }
     }
 
@@ -209,6 +253,27 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(lg) {
+        top: 0%;
+        right: 0;
+        transform: translate(-25%, -50%);
+        width: 730px;
+        height: 280px;
+      }
+
+      @include breakpoint(md) {
+        top: 0%;
+        left: 25%;
+        transform: translate(-20%, -50%);
+        width: 650px;
+        height: 175px;
+      }
+
+      @include breakpoint(sm) {
+        display: none;
       }
     }
 
@@ -223,6 +288,27 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(lg) {
+        top: 0%;
+        left: 50%;
+        transform: translate(-20%, -45%);
+        width: 550px;
+        height: 290px;
+      }
+
+      @include breakpoint(md) {
+        top: 0%;
+        left: 50%;
+        transform: translate(-23%, -45%);
+        width: 510px;
+        height: 280px;
+      }
+
+      @include breakpoint(sm) {
+        display: none;
       }
     }
 
@@ -237,6 +323,27 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(lg) {
+        top: 0%;
+        left: 30%;
+        transform: translate(-25%, -50%);
+        height: 280px;
+        width: 700px;
+      }
+
+      @include breakpoint(md) {
+        top: 0%;
+        left: 30%;
+        transform: translate(-25%, -55%);
+        height: 175px;
+        width: 730px;
+      }
+
+      @include breakpoint(sm) {
+        display: none;
       }
     }
 
@@ -251,6 +358,27 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(lg) {
+        top: 0px;
+        left: 45%;
+        transform: translate(-25%, -35%);
+        height: 310px;
+        width: 235px;
+      }
+
+      @include breakpoint(md) {
+        top: 5%;
+        left: 30%;
+        transform: translate(-25%, -50%);
+        height: 250px;
+        width: 100px;
+      }
+
+      @include breakpoint(sm) {
+        display: none;
       }
     }
   }
@@ -261,6 +389,34 @@ export default {};
     align-items: center;
     gap: 169.5px;
     padding: 73.3px 0;
+
+    @include breakpoint(lg) {
+      gap: 50px;
+    }
+
+    @include breakpoint(md) {
+      gap: 60px;
+    }
+
+    @include breakpoint(sm) {
+      padding: 50px 15px;
+    }
+
+    @include breakpoint(xs) {
+      padding: 30px 15px;
+    }
+
+    .discuss-img {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
 
     &.reverse {
       flex-direction: row-reverse;
@@ -273,36 +429,75 @@ export default {};
 
       .discuss-title {
         width: 40%;
+
+        @include breakpoint(md) {
+          width: 60%;
+        }
+
+        @include breakpoint(sm) {
+          width: 100%;
+        }
       }
 
       .discuss-img {
         position: absolute;
         left: 10%;
         top: 15%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        @include breakpoint(md) {
+          width: 250px;
+        }
+
+        @include breakpoint(sm) {
+          display: none;
+        }
       }
     }
-  }
 
-  .discuss-title {
-    display: flex;
-    flex-direction: column;
-    width: 48%;
-    gap: 32px;
+    .discuss-title {
+      display: flex;
+      flex-direction: column;
+      width: 48%;
+      gap: 32px;
 
-    h6 {
-      font-family: "Seg-bold";
-      font-size: 32px;
-      color: #217a73;
+      @include breakpoint(md) {
+        gap: 25px;
+        width: 100%;
+      }
+
+      h6 {
+        font-family: "Seg-bold";
+        font-size: 32px;
+        color: #217a73;
+
+        @include breakpoint(md) {
+          font-size: 25px;
+        }
+      }
+
+      p {
+        font-family: "Seg";
+        font-size: 24px;
+        line-height: 32px;
+        color: #8a8a8a;
+
+        @include breakpoint(md) {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
     }
 
-    p {
-      font-family: "Seg";
-      font-size: 24px;
-      line-height: 32px;
-      color: #8a8a8a;
+    &-body {
+      padding-top: 92px;
     }
   }
-
   .about-header {
     .header-img-wrapper {
       display: flex;
@@ -311,6 +506,7 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
       }
 
       &::after {
@@ -333,12 +529,12 @@ export default {};
         font-size: 40px;
         color: #ffffff;
         z-index: 2;
+
+        @include breakpoint(sm) {
+          font-size: 30px;
+        }
       }
     }
-  }
-
-  &-body {
-    padding-top: 92px;
   }
 }
 </style>
