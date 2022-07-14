@@ -58,10 +58,9 @@ export default {};
 
   @include breakpoint(md) {
     background-image: none;
-    min-height: 50vh;
   }
 
-  @include breakpoint(xs) {
+  @include breakpoint(sm) {
     background-image: none;
   }
 
@@ -71,6 +70,11 @@ export default {};
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
 
     @include breakpoint(xs) {
       padding: 0 15px;
@@ -83,6 +87,8 @@ export default {};
     margin-left: 35px;
 
     @include breakpoint(sm) {
+      width: 100%;
+      margin-bottom: 60px;
       margin-left: 0;
     }
 
@@ -102,12 +108,7 @@ export default {};
       }
 
       @include breakpoint(sm) {
-        font-size: 30px;
-      }
-
-      @include breakpoint(xs) {
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 40px;
       }
     }
 
@@ -124,8 +125,8 @@ export default {};
         font-size: 18px;
       }
 
-      @include breakpoint(xs) {
-        font-size: 13px;
+      @include breakpoint(sm) {
+        font-size: 20px;
       }
     }
 
@@ -175,6 +176,7 @@ export default {};
     img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
 
     @include breakpoint(lg) {
@@ -188,8 +190,9 @@ export default {};
     }
 
     @include breakpoint(sm) {
-      width: 250px;
-      height: 150px;
+      align-self: center;
+      width: 310px;
+      height: 210px;
     }
   }
 

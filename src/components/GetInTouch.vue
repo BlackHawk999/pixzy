@@ -73,6 +73,10 @@ export default {};
     flex-direction: column;
     background: #ffffff;
     filter: drop-shadow(3px 3px 30px rgba(0, 0, 0, 0.161));
+
+    @include breakpoint(md) {
+      padding: 0 15px;
+    }
   }
   .main-wrapper {
     display: flex;
@@ -83,6 +87,11 @@ export default {};
     flex: 1;
     padding: 54px 57px 36px 66px;
     gap: 26px;
+
+    @include breakpoint(sm) {
+    padding: 30px;
+
+    }
   }
 
   .get-touch-title {
@@ -203,6 +212,10 @@ export default {};
     background: #49d6cb;
     position: relative;
 
+    @include breakpoint(md) {
+      display: none; 
+    }
+
     .contact-infos {
       position: absolute;
       top: 16%;
@@ -279,6 +292,11 @@ export default {};
       position: absolute;
       bottom: 2%;
       right: 5%;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

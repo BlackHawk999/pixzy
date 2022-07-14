@@ -50,6 +50,10 @@ export default {};
     height: 100vh;
     display: flex;
     align-items: center;
+
+    @include breakpoint(sm) {
+      height: auto;
+    }
   }
 
   &-info {
@@ -121,6 +125,10 @@ export default {};
     @include breakpoint(md) {
       transform: translate(50%, 50%);
       height: 265px;
+    }
+
+    @include breakpoint(sm) {
+     display: none;
     }
   }
 }
