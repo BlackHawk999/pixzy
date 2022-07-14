@@ -20,42 +20,27 @@
           <img @click="$router.push('/')" src="@/assets/img/logo.png" alt="" />
         </div>
         <div class="menu-wrapper">
-          <router-link class="menu" to="/" exact-active-class="active"
-            >HOME</router-link
-          >
-          <router-link class="menu" to="/about" exact-active-class="active"
-            >ABOUT US</router-link
-          >
-          <router-link class="menu" to="/services" exact-active-class="active"
-            >SERVICES</router-link
-          >
-          <router-link class="menu" to="/portfolio" exact-active-class="active"
-            >PORTFOLIO</router-link
-          >
-          <router-link class="menu" to="/contact" exact-active-class="active"
-            >CONTACT</router-link
-          >
-          <div class="language">
-            <p class="ru">RU</p>
-            <svg
-              width="17"
-              height="9"
-              viewBox="0 0 17 9"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0.5 0.5L8.5 8.5"
-                stroke="black"
-                stroke-linecap="round"
-              />
-              <path
-                d="M16.5 0.5L8.5 8.5"
-                stroke="black"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
+          <router-link class="menu" to="/" exact-active-class="active">
+            HOME
+          </router-link>
+
+          <router-link class="menu" to="/about" exact-active-class="active">
+            ABOUT US
+          </router-link>
+
+          <router-link class="menu" to="/services" exact-active-class="active">
+            SERVICES
+          </router-link>
+
+          <router-link class="menu" to="/portfolio" exact-active-class="active">
+            PORTFOLIO
+          </router-link>
+
+          <router-link class="menu" to="/contact" exact-active-class="active">
+            CONTACT
+          </router-link>
+        
+          <lang-switcher />
         </div>
       </div>
     </div>
@@ -63,8 +48,11 @@
 </template>
 
 <script>
+import LangSwitcher from "@/components/navbar/langSwitcher"
+
 export default {
   name: "navbar",
+  components: { LangSwitcher },
   data() {
     return {
       scrollPosition: null,
@@ -101,7 +89,7 @@ export default {
   &-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding: 0 15px;
 
     @include breakpoint(md) {
       flex-direction: row-reverse;
@@ -117,14 +105,19 @@ export default {
   }
 
   .logo-wrapper {
+    padding: 10px 0;
+    height: 70px;
+    cursor: pointer;
+
     img {
-      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;  
     }
   }
 
   .menu-wrapper {
     display: flex;
-    align-items: center;
     gap: 52px;
 
     @include breakpoint(md) {
@@ -132,12 +125,13 @@ export default {
     }
   }
   .menu {
-    font-family: "Seg";
+    display: flex;
+    align-items: center;
+    font-family: "Seg-bold";
     font-size: 15px;
     color: #000000;
     text-align: center;
     text-decoration: none;
-    padding: 29px 0 22px 0;
     position: relative;
 
     &::before {

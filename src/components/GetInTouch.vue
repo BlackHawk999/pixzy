@@ -13,7 +13,7 @@
               <input type="email" placeholder="Email" />
               <input type="tel" placeholder="Phone/Telegram" />
             </div>
-            <div class="input-wrapper">
+            <div class="input-wrapper select">
               <select class="select">
                 <option class="holder" value="" disabled selected>
                   I am interested in
@@ -48,7 +48,7 @@
               <h6 class="title">Say Hi</h6>
               <a class="mail" href="#">info@pixyz.com</a>
               <a class="tel" href="#">+998 71 645 57 67</a>
-              <a href="#">Telegram</a>
+              <a class="telegram" href="#">Telegram</a>
             </div>
             <div class="get-touch-img">
               <img src="@/assets/img/get-touch.png" alt="" />
@@ -97,6 +97,13 @@ export default {};
     align-items: center;
     gap: 30px;
 
+    &.select {
+      @include breakpoint(lg) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     .select {
       appearance: none;
       -webkit-appearance: none;
@@ -107,7 +114,7 @@ export default {};
       background-position: calc(100% - 12px) center !important;
       font-family: "Arial";
       font-size: 16px;
-      padding: 18px 0 20px 28px;
+      padding: 18px 55px 20px 28px;
       border: 1px solid #49d6cb;
       width: 100%;
       color: #c9c9c9;
@@ -182,14 +189,6 @@ export default {};
     background: #49d6cb;
     position: relative;
 
-    h6 {
-      font-family: "Seg-bold";
-      font-size: 32px;
-      line-height: 43px;
-      color: #ffffff;
-      margin-bottom: 45px;
-    }
-
     .contact-infos {
       position: absolute;
       top: 16%;
@@ -197,6 +196,10 @@ export default {};
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
+      @include breakpoint(lg) {
+        position: static;
+      }
 
       a {
         font-family: "Seg";
@@ -208,18 +211,53 @@ export default {};
         &:not(:last-child) {
           margin-bottom: 60px;
         }
+
+        @include breakpoint(lg) {
+          position: absolute;
+          margin-bottom: 0 !important;
+        }
       }
 
       .title {
+        font-family: "Seg-bold";
+        font-size: 32px;
+        line-height: 43px;
+        color: #ffffff;
+        margin-bottom: 45px;
         transform: translateX(20%);
+        @include breakpoint(lg) {
+          position: absolute;
+          bottom: 560px;
+          left: 60px;
+          transform: translate(0);
+          margin-bottom: 0;
+        }
       }
 
       .mail {
         transform: translateX(35%);
+
+        @include breakpoint(lg) {
+          bottom: 510px;
+          left: 70px;
+          transform: translateX(0);
+        }
       }
 
       .tel {
         transform: translateX(45%);
+        @include breakpoint(lg) {
+          bottom: 440px;
+          left: 60px;
+          transform: translateX(0);
+        }
+      }
+
+      .telegram {
+        @include breakpoint(lg) {
+          bottom: 350px;
+          left: 70px;
+        }
       }
     }
 

@@ -56,6 +56,10 @@ export default {};
   padding-top: 100px;
   min-height: 100vh;
 
+  @include breakpoint(xs) {
+    background-image: none;
+  }
+
   &-wrapper {
     position: relative;
     display: flex;
@@ -69,6 +73,10 @@ export default {};
     position: relative;
     margin-left: 35px;
 
+    @include breakpoint(sm) {
+      margin-left: 0;
+    }
+
     .intro-title {
       font-family: "Seg-bold";
       font-size: 56px;
@@ -78,6 +86,19 @@ export default {};
       @include breakpoint(lg) {
         font-size: 45px;
         margin-bottom: 20px;
+      }
+      @include breakpoint(md) {
+        font-size: 35px;
+        margin-bottom: 13px;
+      }
+
+      @include breakpoint(sm) {
+        font-size: 30px;
+      }
+
+      @include breakpoint(xs) {
+        font-size: 20px;
+        margin-bottom: 10px;
       }
     }
 
@@ -89,6 +110,14 @@ export default {};
       @include breakpoint(lg) {
         font-size: 22px;
       }
+
+      @include breakpoint(md) {
+        font-size: 18px;
+      }
+
+      @include breakpoint(xs) {
+        font-size: 13px;
+      }
     }
 
     .title-img-wrapper {
@@ -98,6 +127,10 @@ export default {};
 
       @include breakpoint(lg) {
         top: 20%;
+      }
+
+      @include breakpoint(md) {
+        display: none;
       }
     }
 
@@ -109,6 +142,18 @@ export default {};
 
       @include breakpoint(lg) {
         bottom: 5%;
+      }
+
+      @include breakpoint(md) {
+        bottom: -10%;
+      }
+      @include breakpoint(md) {
+        bottom: -10%;
+        left: 0;
+      }
+
+      @include breakpoint(sm) {
+        display: none;
       }
     }
   }
@@ -126,12 +171,22 @@ export default {};
       width: 500px;
       height: 300px;
     }
+
+    @include breakpoint(md) {
+      width: 430px;
+      height: 240px;
+    }
+
+    @include breakpoint(sm) {
+      width: 250px;
+      height: 150px;
+    }
   }
 
   .icon-phone {
-    position: absolute;
+    position: fixed;
     bottom: 7%;
-    right: 0;
+    right: 10%;
     width: 58px;
     height: 58px;
     padding: 17px 15px 15px 20px;
@@ -141,6 +196,7 @@ export default {};
     box-shadow: 0 0 0 rgba(204, 169, 44, 0.4);
     cursor: pointer;
     animation: pulse 1s infinite;
+    z-index: 9999;
 
     svg {
       width: 100%;

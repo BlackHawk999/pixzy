@@ -108,7 +108,7 @@ export default {
 
   .technologies {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     gap: 35.5px;
 
     @include breakpoint(lg) {

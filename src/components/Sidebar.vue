@@ -8,45 +8,27 @@
       <div class="wrapper">
         <div class="sidebar-menu-wrapper">
           <div class="menu-wrapper">
-            <router-link class="menu" to="/" exact-active-class="active"
-              >HOME</router-link
-            >
-            <router-link class="menu" to="/about" exact-active-class="active"
-              >ABOUT US</router-link
-            >
-            <router-link class="menu" to="/services" exact-active-class="active"
-              >SERVICES</router-link
-            >
-            <router-link
-              class="menu"
-              to="/portfolio"
-              exact-active-class="active"
-              >PORTFOLIO</router-link
-            >
-            <router-link class="menu" to="/contact" exact-active-class="active"
-              >CONTACT</router-link
-            >
-            <div class="language">
-              <p class="ru">RU</p>
-              <svg
-                width="17"
-                height="9"
-                viewBox="0 0 17 9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0.5 0.5L8.5 8.5"
-                  stroke="black"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M16.5 0.5L8.5 8.5"
-                  stroke="black"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
+            <router-link class="menu" to="/" exact-active-class="active">
+              HOME
+            </router-link>
+
+            <router-link class="menu" to="/about" exact-active-class="active">
+              ABOUT US
+            </router-link>
+
+            <router-link class="menu" to="/services" exact-active-class="active">
+              SERVICES
+            </router-link>
+
+            <router-link class="menu" to="/portfolio" exact-active-class="active">
+              PORTFOLIO
+            </router-link>
+
+            <router-link class="menu" to="/contact" exact-active-class="active">
+              CONTACT
+            </router-link>
+
+            <lang-switcher />
           </div>
         </div>
       </div>
@@ -55,8 +37,11 @@
 </template>
 
 <script>
+import LangSwitcher from "@/components/navbar/langSwitcher"
+
 export default {
   name: "Sidebar",
+  components: { LangSwitcher },
   data() {
     return {
       categoryStatus: false,
@@ -97,16 +82,18 @@ export default {
   }
 }
 .sidebar {
-  background: #ffffff;
   position: fixed;
-  right: 0;
-  left: 65%;
+  width: 70vw;
   min-height: 100vh;
-  display: none;
+  right: 0;
+  background: #ffffff;
   transform: translateX(100%);
   transition: all 0.4s;
+  box-shadow: 0px 0px 30px rgba(0, 0 ,0 , 0.3);
   z-index: 2222222;
+
   &.open {
+    right: 0;
     transform: translateX(0%);
   }
 
@@ -195,26 +182,6 @@ export default {
     top: 0px;
   }
 
-  .language-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 10px 7px 10px;
-
-    p {
-      font-family: "Lato";
-      font-size: 14px;
-      color: #414141;
-      margin: 0;
-    }
-
-    .choose-lang {
-      font-family: "Lato";
-      font-size: 14px;
-      line-height: 17px;
-      color: #1a4900;
-    }
-  }
   .menu-wrapper {
     display: flex;
     flex-direction: column;

@@ -39,7 +39,7 @@
         <get-in-touch />
       </div>
       <div class="contact-maps">
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=69.279737%2C41.311151&scroll=false&z=15" width="100%" height="700" frameborder="1" style="border: 0" allowfullscreen="true"/>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23970.19066160692!2d69.20060567604129!3d41.32465850203895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8d64bfd1b3%3A0x261b8948e4b4e45e!2z0KjQsNC50YXQsNC90YLQsNGF0YPRgNGB0LrQuNC5INGA0LDQudC-0L0sINCi0LDRiNC60LXQvdGCLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1657779546708!5m2!1sru!2s" width="100%" height="700" frameborder="1" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
