@@ -115,6 +115,14 @@ export default {};
   padding: 76px 0 81px 0;
   background: #f4f6fc;
 
+  @include breakpoint(lg) {
+    padding: 60px 0;
+  }
+
+  &-wrapper {
+    padding: 0 15px;
+  }
+
   .feedback-body-wrapper {
     position: relative;
     margin-bottom: 41px;
@@ -124,12 +132,32 @@ export default {};
     position: absolute;
     top: -50px;
     left: 15%;
+
+    @include breakpoint(lg) {
+      left: 10%;
+    }
+
+    @include breakpoint(md) {
+      left: 0;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
   }
 
   .feedback-quote-down {
     position: absolute;
-    right: 20%;
+    right: 17%;
     bottom: 50px;
+
+    @include breakpoint(md) {
+      right: 0;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
   }
 
   .feedback-title {
@@ -138,6 +166,24 @@ export default {};
     color: #217a73;
     text-align: center;
     margin-bottom: 51px;
+
+    @include breakpoint(lg) {
+      font-size: 35px;
+      margin-bottom: 35px;
+    }
+    @include breakpoint(md) {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    @include breakpoint(xs) {
+      font-size: 20px;
+    }
   }
 
   .feedback-body {
@@ -146,6 +192,14 @@ export default {};
     align-items: center;
     gap: 50px;
 
+    @include breakpoint(md) {
+      gap: 40px;
+    }
+
+    @include breakpoint(sm) {
+      gap: 30px;
+    }
+
     p {
       font-family: "Seg";
       font-size: 24px;
@@ -153,6 +207,23 @@ export default {};
       color: #7d7d7d;
       text-align: center;
       width: 50%;
+
+      @include breakpoint(lg) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(md) {
+        width: 60%;
+      }
+
+      @include breakpoint(sm) {
+        width: 100%;
+      }
+
+      @include breakpoint(xs) {
+        font-size: 15px;
+        line-height: 25px;
+      }
     }
   }
 

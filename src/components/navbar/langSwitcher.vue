@@ -73,7 +73,7 @@ export default {
     display: flex;
     align-items: center;
     border-radius: 6px;
-    border: 1px solid #efefef;
+    // border: 1px solid #efefef;
     padding: 5px 8px;
     cursor: pointer;
   }

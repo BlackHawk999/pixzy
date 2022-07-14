@@ -6,8 +6,8 @@
       </div>
       <Navbar @isOpen="isActive = true" />
       <router-view />
-      <Footer />
-      <SubFooter />
+       <Footer /> 
+      <SubFooter /> 
     </div>
   </div>
 </template>

@@ -6,7 +6,7 @@
     <pixyz-work />
     <pixzy-techno />
     <pixzy-testimonials />
-    <get-in-touch />
+    <!-- <get-in-touch /> -->
   </div>
 </template>
 

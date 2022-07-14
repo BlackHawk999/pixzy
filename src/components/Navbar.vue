@@ -93,6 +93,7 @@ export default {
 
     @include breakpoint(md) {
       flex-direction: row-reverse;
+      align-items: center;
     }
   }
 

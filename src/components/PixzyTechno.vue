@@ -64,6 +64,10 @@ export default {
     padding: 80px 0;
   }
 
+  @include breakpoint(md) {
+    padding: 60px 0;
+  }
+
   .techno-title {
     position: relative;
     display: flex;
@@ -76,6 +80,10 @@ export default {
       margin-bottom: 40px;
     }
 
+    @include breakpoint(sm) {
+      padding: 0 15px;
+    }
+
     h5 {
       font-family: "Seg-bold";
       font-size: 40px;
@@ -85,15 +93,31 @@ export default {
       @include breakpoint(lg) {
         font-size: 35px;
       }
+
+      @include breakpoint(md) {
+        font-size: 30px;
+      }
+
+      @include breakpoint(sm) {
+        font-size: 25px;
+      }
+
+      @include breakpoint(sm) {
+        font-size: 20px;
+      }
     }
 
     p {
       font-family: "Seg";
       font-size: 24px;
       color: #8a8a8a;
+      text-align: center;
 
       @include breakpoint(lg) {
         font-size: 20px;
+      }
+      @include breakpoint(md) {
+        font-size: 15px;
       }
     }
 
@@ -103,6 +127,10 @@ export default {
       left: 0;
       transform: translate(-15%);
       z-index: -1;
+
+      @include breakpoint(sm) {
+        display: none;
+      }
     }
   }
 
@@ -113,6 +141,19 @@ export default {
 
     @include breakpoint(lg) {
       grid-template-columns: repeat(5, 1fr);
+    }
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint(xs) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
   }
 

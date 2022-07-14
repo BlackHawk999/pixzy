@@ -253,6 +253,17 @@ export default {
 
   &-wrapper {
     padding: 100px 0;
+
+    @include breakpoint(lg) {
+      padding: 80px 0;
+    }
+
+    @include breakpoint(md) {
+      padding: 70px 15px;
+    }
+    @include breakpoint(sm) {
+      padding: 60px 15px;
+    }
   }
 
   .service-header {
@@ -296,6 +307,14 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 47px;
     row-gap: 32px;
+
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 </style>

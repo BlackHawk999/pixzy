@@ -61,6 +61,14 @@ export default {
     right: 50%;
     transform: translate(50%, -50%);
     z-index: 2;
+
+    @include breakpoint(md) {
+      font-size: 20px;
+    }
+
+     @include breakpoint(sm) {
+      font-size: 15px;
+    }
   }
 }
 </style>

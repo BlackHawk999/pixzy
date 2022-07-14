@@ -56,6 +56,11 @@ export default {};
   padding-top: 100px;
   min-height: 100vh;
 
+  @include breakpoint(md) {
+    background-image: none;
+    min-height: 50vh;
+  }
+
   @include breakpoint(xs) {
     background-image: none;
   }
@@ -66,6 +71,10 @@ export default {};
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    @include breakpoint(xs) {
+      padding: 0 15px;
+    }
   }
 
   &-title-wrapper {
@@ -127,6 +136,7 @@ export default {};
 
       @include breakpoint(lg) {
         top: 20%;
+        left: -8%;
       }
 
       @include breakpoint(md) {

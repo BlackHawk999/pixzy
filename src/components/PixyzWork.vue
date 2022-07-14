@@ -75,6 +75,10 @@ export default {};
 .pixzy-work {
   padding-top: 100px;
 
+  @include breakpoint(lg) {
+    padding-top: 70px;
+  }
+
   &-wrapper {
     display: flex;
     flex-direction: column;
@@ -87,6 +91,10 @@ export default {};
     text-align: center;
     color: #217a73;
     margin-bottom: 12px;
+
+    @include breakpoint(lg) {
+      font-size: 35px;
+    }
   }
 
   .arrow {
@@ -94,6 +102,30 @@ export default {};
     top: 80px;
     left: 50%;
     transform: translate(-25%, -50%);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include breakpoint(md) {
+      width: 220px;
+      height: 140px;
+      top: 50px;
+      left: 50%;
+      transform: translate(-40%, -50%);
+    }
+
+    @include breakpoint(sm) {
+      width: 200px;
+      height: 100px;
+      top: 50px;
+      left: 50%;
+      transform: translate(-40%, -50%);
+    }
+    @include breakpoint(xs) {
+      display: none;
+    }
 
     &.down {
       position: absolute;
@@ -108,11 +140,30 @@ export default {};
 
       @include breakpoint(lg) {
         top: -5%;
-        left: 31%;
+        right: 0;
         width: 800px;
+        height: 215px;
+        transform: translate(-40%, -50%);
+      }
+
+      @include breakpoint(md) {
+        top: 0%;
+        right: 0;
+        width: 485px;
+        height: 160px;
+      }
+
+      @include breakpoint(sm) {
+        top: 0%;
+        right: 0;
+        width: 400px;
+        height: 170px;
+      }
+
+      @include breakpoint(xs) {
+        display: none;
       }
     }
-
     &.pre-down {
       position: absolute;
       top: 50px;
@@ -125,9 +176,28 @@ export default {};
       }
 
       @include breakpoint(lg) {
-        top: 40px;
-        left: 45%;
-        height: 240px;
+        top: 10px;
+        right: 0px;
+        height: 180px;
+        width: 300px;
+
+        transform: translate(35%, -50%);
+      }
+
+      @include breakpoint(md) {
+        top: 10px;
+        right: 0;
+        height: 160px;
+      }
+
+      @include breakpoint(sm) {
+        top: 0px;
+        right: 0;
+        transform: translate(-50%, -50%);
+        height: 170px;
+      }
+      @include breakpoint(xs) {
+        display: none;
       }
     }
 
@@ -144,60 +214,117 @@ export default {};
       @include breakpoint(lg) {
         top: -15px;
         width: 435px;
-        height: 150px;
+        height: 100px;
+      }
+
+      @include breakpoint(md) {
+        top: 0px;
+        width: 340px;
+        height: 100px;
+      }
+
+      @include breakpoint(sm) {
+        top: 0px;
+        width: 250px;
+        right: 0;
+        height: 100px;
+        transform: translate(-20%, -100%);
+      }
+      @include breakpoint(xs) {
+        display: none;
       }
     }
   }
+}
 
-  .work-discuss {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    padding: 100px 0;
+.work-discuss {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding: 100px 0;
 
-    @include breakpoint(lg) {
-      gap: 55px;
-      padding: 80px 0;
+  @include breakpoint(lg) {
+    gap: 55px;
+    padding: 80px 0;
+  }
+
+  @include breakpoint(md) {
+    gap: 30px;
+  }
+}
+
+.discuss-img {
+  width: 100%;
+  height: 100%;
+
+  @include breakpoint(md) {
+    width: 1150px;
+    height: 180px;
+  }
+
+  @include breakpoint(md) {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.discuss-title {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include breakpoint(md) {
+    gap: 15px;
+  }
+
+  @include breakpoint(sm) {
+    padding: 0 15px;
+  }
+
+  h6 {
+    font-family: "Seg-bold";
+    font-size: 32px;
+    color: #217a73;
+
+    @include breakpoint(md) {
+      font-size: 25px;
     }
   }
 
-  .discuss-title {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  p {
+    font-family: "Seg";
+    font-size: 24px;
+    line-height: 32px;
+    color: #8a8a8a;
 
-    h6 {
-      font-family: "Seg-bold";
-      font-size: 32px;
-      color: #217a73;
-    }
-
-    p {
-      font-family: "Seg";
-      font-size: 24px;
-      line-height: 32px;
-      color: #8a8a8a;
+    @include breakpoint(md) {
+      font-size: 20px;
+      line-height: 25px;
     }
   }
+}
 
-  .step-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.step-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .step {
-    font-family: "Arial";
-    font-size: 16px;
-    padding: 10px 52px;
-    color: #ffffff;
-    background: #49d6cb;
-    border: 1px solid #49d6cb;
-    border-radius: 5px;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+.step {
+  font-family: "Arial";
+  font-size: 16px;
+  padding: 10px 52px;
+  color: #ffffff;
+  background: #49d6cb;
+  border: 1px solid #49d6cb;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 </style>

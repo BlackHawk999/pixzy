@@ -39,7 +39,16 @@
         <get-in-touch />
       </div>
       <div class="contact-maps">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23970.19066160692!2d69.20060567604129!3d41.32465850203895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8d64bfd1b3%3A0x261b8948e4b4e45e!2z0KjQsNC50YXQsNC90YLQsNGF0YPRgNGB0LrQuNC5INGA0LDQudC-0L0sINCi0LDRiNC60LXQvdGCLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1657779546708!5m2!1sru!2s" width="100%" height="700" frameborder="1" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23970.19066160692!2d69.20060567604129!3d41.32465850203895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8d64bfd1b3%3A0x261b8948e4b4e45e!2z0KjQsNC50YXQsNC90YLQsNGF0YPRgNGB0LrQuNC5INGA0LDQudC-0L0sINCi0LDRiNC60LXQvdGCLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1657779546708!5m2!1sru!2s"
+          width="100%"
+          height="700"
+          frameborder="1"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
   </div>
@@ -118,6 +127,18 @@ export default {
     display: flex;
     justify-content: space-between;
     gap: 44px;
+
+    @include breakpoint(md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      padding: 0 15px;
+    }
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+    }
   }
 
   .adress-wrapper {
@@ -129,6 +150,14 @@ export default {
     filter: drop-shadow(3px 3px 40px rgba(126, 126, 126, 0.102));
     background: #ffffff;
     border-radius: 15px;
+
+    @include breakpoint(md) {
+      padding: 45px 0 45px 0;
+    }
+
+    @include breakpoint(md) {
+      padding: 35px 0 35px 0;
+    }
   }
 
   .adress-icon {
@@ -140,6 +169,16 @@ export default {
     padding: 26px 32px 25px 31px;
     background: #49d6cb;
     border-radius: 50%;
+
+    @include breakpoint(md) {
+      width: 80px;
+      height: 80px;
+    }
+
+    @include breakpoint(sm) {
+      width: 70px;
+      height: 70px;
+    }
   }
 
   .adress-title {
@@ -147,6 +186,14 @@ export default {
     font-size: 24px;
     color: #000;
     margin: 27px 0 38px 0;
+
+    @include breakpoint(md) {
+      margin: 22px 0 33px 0;
+    }
+
+    @include breakpoint(sm) {
+      margin: 20px 0 20px 0;
+    }
   }
 
   .link {

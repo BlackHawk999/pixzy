@@ -90,12 +90,21 @@ export default {};
     font-size: 40px;
     color: #217a73;
     text-align: start;
+
+    @include breakpoint(md) {
+      font-size: 29px;
+    }
   }
 
   .input-wrapper {
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+      gap: 20px;
+    }
 
     &.select {
       @include breakpoint(lg) {
@@ -127,9 +136,14 @@ export default {};
     input {
       font-family: "Arial";
       font-size: 16px;
-      padding: 18px 0 20px 28px;
+      padding: 18px 40px 20px 28px;
       border: 1px solid #49d6cb;
       width: 100%;
+
+      @include breakpoint(md) {
+        font-size: 15px;
+        padding: 10px 30px 15px 15px;
+      }
 
       &:focus {
         outline: none !important;
@@ -185,7 +199,7 @@ export default {};
   .get-touch-contact {
     display: flex;
     align-items: flex-start;
-    min-width: 480px;
+    width: 480px;
     background: #49d6cb;
     position: relative;
 

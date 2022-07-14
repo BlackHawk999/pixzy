@@ -450,6 +450,10 @@ export default {};
   background: #f4f6fc;
   position: relative;
 
+  @include breakpoint(md) {
+    padding: 50px 0;
+  }
+
   .service-info {
     display: flex;
     flex-direction: column;
@@ -471,6 +475,10 @@ export default {};
       font-size: 35px;
       margin-bottom: 15px;
     }
+
+    @include breakpoint(md) {
+      font-size: 30px;
+    }
   }
 
   .service-text {
@@ -482,6 +490,9 @@ export default {};
     @include breakpoint(lg) {
       font-size: 20px;
     }
+    @include breakpoint(md) {
+      font-size: 15px;
+    }
   }
 
   .service-kinds {
@@ -489,6 +500,19 @@ export default {};
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 44px;
+
+    @include breakpoint(lg) {
+      gap: 25px;
+    }
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0 15px;
+    }
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .development {
@@ -584,6 +608,14 @@ export default {};
     right: 0;
     top: 85%;
     z-index: 0;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+
+    @include breakpoint(sm) {
+      display: none;
+    }
   }
 
   .arrow-right {
@@ -609,6 +641,18 @@ export default {};
 
     @include breakpoint(lg) {
       bottom: -18%;
+    }
+
+    @include breakpoint(md) {
+      width: 60px;
+      height: 60px;
+      bottom: -10%;
+      transform: translate(50%, -50%);
+    }
+
+    @include breakpoint(sm) {
+      bottom: -5%;
+      transform: translate(50%, -50%);
     }
   }
 }

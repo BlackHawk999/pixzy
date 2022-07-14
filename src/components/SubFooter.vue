@@ -25,11 +25,19 @@ export default {};
     align-items: center;
     justify-content: space-between;
 
+    @include breakpoint(sm) {
+      padding: 0 10px;
+    }
+
     p {
       font-family: "Seg";
       font-size: 16px;
       line-height: 21px;
       color: #8a8a8a;
+
+      @include breakpoint(sm) {
+        font-size: 10px;
+      }
     }
   }
 }

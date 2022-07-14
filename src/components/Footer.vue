@@ -209,9 +209,23 @@ export default {};
     gap: 46.3px;
   }
 
+  &-logo {
+    padding: 0 15px;
+  }
+
   .footer-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 20px;
+      padding: 0 15px;
+    }
+
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   .about-wrapper {
@@ -224,6 +238,11 @@ export default {};
       color: #217a73;
       text-align: start;
       margin-bottom: 18px;
+
+      @include breakpoint(md) {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
     }
 
     p {
@@ -232,6 +251,10 @@ export default {};
       font-size: 16px;
       line-height: 21px;
       color: #8a8a8a;
+
+      @include breakpoint(md) {
+        font-size: 15px;
+      }
     }
   }
 
@@ -240,12 +263,21 @@ export default {};
     align-items: center;
     margin-top: 34px;
     gap: 9.6px;
+
+    @include breakpoint(md) {
+      margin-top: 20px;
+      gap: 6px;
+    }
   }
 
   .page-links {
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @include breakpoint(md) {
+      gap: 5px;
+    }
   }
 
   .icon {

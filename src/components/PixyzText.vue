@@ -41,6 +41,11 @@ export default {};
   position: relative;
   min-height: 100vh;
 
+  @include breakpoint(md) {
+    background-image: none;
+    min-height: 50vh;
+  }
+
   &-wrapper {
     height: 100vh;
     display: flex;
@@ -56,6 +61,10 @@ export default {};
     @include breakpoint(lg) {
       gap: 15px;
     }
+
+    @include breakpoint(md) {
+      padding: 0 15px;
+    }
   }
 
   &-title {
@@ -67,6 +76,10 @@ export default {};
     @include breakpoint(lg) {
       font-size: 35px;
     }
+
+    @include breakpoint(sm) {
+      font-size: 30px;
+    }
   }
 
   &-text {
@@ -74,10 +87,16 @@ export default {};
     font-size: 20px;
     line-height: 32px;
     color: #8a8a8a;
+    text-align: center;
 
     @include breakpoint(lg) {
       font-size: 16px;
       line-height: 30px;
+    }
+
+    @include breakpoint(sm) {
+      font-size: 13px;
+      line-height: 25px;
     }
   }
 
@@ -95,8 +114,13 @@ export default {};
     }
 
     @include breakpoint(lg) {
-      transform: translate(50%, 55%);
-      height: 180px;
+      transform: translate(50%, 35%);
+      height: 300px;
+    }
+
+    @include breakpoint(md) {
+      transform: translate(50%, 50%);
+      height: 265px;
     }
   }
 }

@@ -98,138 +98,163 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .type {
-    &-cards-wrapper {
-     width: 100%;
+.type {
+  &-cards-wrapper {
+    width: 100%;
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 42px 62px 47px 61px;
+    background: #ffffff;
+    border-radius: 10px;
+    filter: drop-shadow(3px 3px 40px rgba(126, 126, 126, 0.102));
+
+    @include breakpoint(lg) {
+      gap: 15px;
     }
 
-    &-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 42px 62px 47px 61px;
-      background: #ffffff;
-      border-radius: 10px;
-      filter: drop-shadow(3px 3px 40px rgba(126, 126, 126, 0.102));
+    @include breakpoint(md) {
+      gap: 10px;
+      padding: 35px 50px 35px 50px;
+    }
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 91px;
+    height: 91px;
+    border-radius: 50%;
+    background: #49d6cb;
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h6 {
+      font-family: "Seg";
+      font-size: 24px;
+      font-weight: 300;
+      color: #000;
+      margin-bottom: 11.8px;
+
+      @include breakpoint(md) {
+        margin-bottom: 10px;
+      }
     }
 
-    &-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 91px;
-      height: 91px;
-      border-radius: 50%;
+    p {
+      font-family: "Seg";
+      font-size: 16px;
+      line-height: 21px;
+      color: #c9c9c9;
+      text-align: center;
+      margin-bottom: 36px;
+
+      @include breakpoint(md) {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  &-order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-family: "Seg";
+      font-size: 32px;
+      line-height: 43px;
+      color: #00a49a;
+      white-space: nowrap;
+      margin-bottom: 5px;
+    }
+
+    span {
+      font-family: "Seg";
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 16px;
+      color: #c9c9c9;
+      margin-bottom: 29px;
+
+      strong {
+        color: red;
+      }
+    }
+
+    button {
+      padding: 17px 50px 14px 50px;
+      font-family: "Seg";
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 21px;
+      color: #ffffff;
       background: #49d6cb;
-    }
+      border-radius: 10px;
+      border: none;
+      animation: pulse 0.8s infinite;
 
-    &-info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      h6 {
-        font-family: "Seg";
-        font-size: 24px;
-        font-weight: 300;
-        color: #000;
-        margin-bottom: 11.8px;
-      }
-
-      p {
-        font-family: "Seg";
-        font-size: 16px;
-        line-height: 21px;
-        color: #c9c9c9;
-        text-align: center;
-        margin-bottom: 36px;
-      }
-    }
-
-    &-order {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      p {
-        font-family: "Seg";
-        font-size: 32px;
-        line-height: 43px;
-        color: #00a49a;
-        white-space: nowrap;
-        margin-bottom: 5px;
-      }
-
-      span {
-        font-family: "Seg";
-        font-weight: 300;
-        font-size: 12px;
-        line-height: 16px;
-        color: #c9c9c9;
-        margin-bottom: 29px;
-
-        strong {
-          color: red;
+      @keyframes pulse {
+        0% {
+          -webkit-box-shadow: 0 0 0 0 rgba(92, 236, 168, 0.4);
+        }
+        70% {
+          -webkit-box-shadow: 0 0 0 10px rgba(79, 226, 185, 0);
+        }
+        100% {
+          -webkit-box-shadow: 0 0 0 0 rgba(89, 230, 199, 0);
         }
       }
 
-      button {
-        padding: 17px 50px 14px 50px;
-        font-family: "Seg";
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 21px;
-        color: #ffffff;
-        background: #49d6cb;
-        border-radius: 10px;
-        border: none;
-        animation: pulse 0.8s infinite;
-
-        @keyframes pulse {
-          0% {
-            -webkit-box-shadow: 0 0 0 0 rgba(92, 236, 168, 0.4);
-          }
-          70% {
-            -webkit-box-shadow: 0 0 0 10px rgba(79, 226, 185, 0);
-          }
-          100% {
-            -webkit-box-shadow: 0 0 0 0 rgba(89, 230, 199, 0);
-          }
+      @keyframes pulse {
+        0% {
+          -moz-box-shadow: 0 0 0 0 rgba(120, 228, 194, 0.4);
+          box-shadow: 0 0 0 0 rgba(36, 211, 191, 0.4);
         }
-
-        @keyframes pulse {
-          0% {
-            -moz-box-shadow: 0 0 0 0 rgba(120, 228, 194, 0.4);
-            box-shadow: 0 0 0 0 rgba(36, 211, 191, 0.4);
-          }
-          70% {
-            -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
-            box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
-          }
-          100% {
-            -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-            box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
-          }
+        70% {
+          -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+          box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
         }
-      }
-    }
-
-    &-types {
-      display: flex;
-      flex-direction: column;
-      gap: 19px;
-
-      .type {
-        display: flex;
-        align-items: center;
-        gap: 21px;
-
-        span {
-          font-family: "Seg";
-          font-size: 16px;
-          line-height: 21px;
-          color: #8a8a8a;
+        100% {
+          -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+          box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
         }
       }
     }
   }
+
+  &-types {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    @include breakpoint(md) {
+      gap: 15px;
+    }
+
+    @include breakpoint(sm) {
+      gap: 10px;
+    }
+
+    .type {
+      display: flex;
+      align-items: center;
+      gap: 21px;
+
+      span {
+        font-family: "Seg";
+        font-size: 16px;
+        line-height: 21px;
+        color: #8a8a8a;
+      }
+    }
+  }
+}
 </style>

@@ -110,8 +110,16 @@ export default {
   .portfolio-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 96px 0 100px 0;
+    padding: 96px 15px 100px 15px;
     gap: 8px;
+
+    @include breakpoint(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(xs) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }
 </style>
