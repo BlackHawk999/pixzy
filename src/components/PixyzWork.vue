@@ -4,7 +4,7 @@
       <div class="pixzy-work-wrapper">
         <h4 class="pixzy-work-title">How we work</h4>
         <div class="work-discuss">
-          <div class="arrow">
+          <div class="arrow-first">
             <img src="@/assets/img/work-arrow.png" alt="" />
           </div>
           <div class="discuss-img">
@@ -98,36 +98,36 @@ export default {};
   }
 
   .arrow {
-    position: absolute;
-    top: 95px;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    width: 330px;
-    height: 190px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    @include breakpoint(md) {
-      width: 220px;
-      height: 140px;
-      top: 50px;
+    &-first {
+      position: absolute;
+      top: 95px;
       left: 50%;
       transform: translate(-40%, -50%);
-    }
+      width: 330px;
+      height: 190px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      @include breakpoint(md) {
+        width: 220px;
+        height: 140px;
+        top: 50px;
+        left: 50%;
+        transform: translate(-40%, -50%);
+      }
 
-    @include breakpoint(sm) {
-      width: 200px;
-      height: 100px;
-      top: 50px;
-      left: 50%;
-      transform: translate(-40%, -50%);
-    }
-    @include breakpoint(xs) {
-      display: none;
+      @include breakpoint(sm) {
+        width: 200px;
+        height: 100px;
+        top: 50px;
+        left: 50%;
+        transform: translate(-40%, -50%);
+      }
+      @include breakpoint(xs) {
+        display: none;
+      }
     }
 
     &.down {
@@ -182,7 +182,7 @@ export default {};
       position: absolute;
       top: 50px;
       left: 50%;
-      transform: translate(0%, -50%);
+      transform: translate(-30%, -50%);
 
       img {
         width: 100%;
