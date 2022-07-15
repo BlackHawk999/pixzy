@@ -162,6 +162,19 @@ export default {};
 
   &-body {
     padding: 100px 0;
+
+    @include breakpoint(md) {
+    padding: 80px 0;
+    }
+
+    @include breakpoint(sm) {
+    padding: 50px 0;
+    }
+
+
+    @include breakpoint(xs) {
+    padding: 35px 0;
+    }
   }
 
   &-title {
@@ -540,6 +553,10 @@ export default {};
 
         @include breakpoint(sm) {
           font-size: 30px;
+        }
+
+        @include breakpoint(xs) {
+          font-size: 28px;
         }
       }
     }
