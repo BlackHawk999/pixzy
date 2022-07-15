@@ -99,13 +99,16 @@ export default {};
 
   .arrow {
     position: absolute;
-    top: 80px;
+    top: 95px;
     left: 50%;
-    transform: translate(-25%, -50%);
+    transform: translate(-40%, -50%);
+    width: 330px;
+    height: 190px;
 
     img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
     }
 
     @include breakpoint(md) {
@@ -350,5 +353,11 @@ export default {};
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #49d6cb;
+    background: #ffffff;
+  }
 }
 </style>

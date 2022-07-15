@@ -89,8 +89,7 @@ export default {};
     gap: 26px;
 
     @include breakpoint(sm) {
-    padding: 30px;
-
+      padding: 30px;
     }
   }
 
@@ -213,7 +212,7 @@ export default {};
     position: relative;
 
     @include breakpoint(md) {
-      display: none; 
+      display: none;
     }
 
     .contact-infos {
