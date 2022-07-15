@@ -316,7 +316,7 @@ export default {};
       position: absolute;
       top: 5%;
       left: 30%;
-      transform: translate(-25%, -55%);
+      transform: translate(-20%, -55%);
       height: 280px;
       width: 1050px;
 
