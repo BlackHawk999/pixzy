@@ -166,9 +166,15 @@ export default {
     justify-content: center;
     width: 91px;
     height: 91px;
-    padding: 26px 32px 25px 31px;
+    padding: 19px;
     background: #49d6cb;
     border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
 
     @include breakpoint(md) {
       width: 80px;

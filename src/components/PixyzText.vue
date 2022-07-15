@@ -115,20 +115,30 @@ export default {};
     img {
       width: 100%;
       height: 100%;
+      object-fit: contain;
+    }
+
+    @include breakpoint(xl) {
+      height: 470px;
     }
 
     @include breakpoint(lg) {
-      transform: translate(50%, 35%);
-      height: 300px;
+      transform: translate(50%, 50%);
+      height: 375px;
     }
 
     @include breakpoint(md) {
       transform: translate(50%, 50%);
+      height: 365px;
+    }
+
+    @include breakpoint(sm) {
+      transform: translate(50%, 15%);
       height: 265px;
     }
 
     @include breakpoint(sm) {
-     display: none;
+      display: none;
     }
   }
 }

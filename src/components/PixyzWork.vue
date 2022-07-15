@@ -136,14 +136,23 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(xl) {
+        height: 300px;
+        width: 775px;
+        top: 0%;
+        left: 0;
+        transform: translate(0%, -55%);
       }
 
       @include breakpoint(lg) {
         top: -5%;
         right: 0;
-        width: 800px;
+        width: 820px;
         height: 215px;
-        transform: translate(-40%, -50%);
+        transform: translate(0%, -50%);
       }
 
       @include breakpoint(md) {
@@ -151,13 +160,15 @@ export default {};
         right: 0;
         width: 485px;
         height: 160px;
+        transform: translate(10%, -50%);
       }
 
       @include breakpoint(sm) {
         top: 0%;
         right: 0;
-        width: 400px;
+        width: 465px;
         height: 170px;
+        transform: translate(10%, -50%);
       }
 
       @include breakpoint(xs) {
@@ -173,6 +184,14 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(xl) {
+        height: 245px;
+        top: 25px;
+        left: 50%;
+        transform: translate(-35%, -50%);
       }
 
       @include breakpoint(lg) {
@@ -191,10 +210,9 @@ export default {};
       }
 
       @include breakpoint(sm) {
-        top: 0px;
-        right: 0;
-        transform: translate(-50%, -50%);
-        height: 170px;
+        transform: translate(-15%, -50%);
+        height: 185px;
+        width: 300px;
       }
       @include breakpoint(xs) {
         display: none;
@@ -209,6 +227,12 @@ export default {};
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
+      }
+
+      @include breakpoint(xl) {
+        height: 240px;
+        width: 610px;
       }
 
       @include breakpoint(lg) {
