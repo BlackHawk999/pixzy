@@ -119,12 +119,12 @@ export default {};
     }
 
     @include breakpoint(xl) {
-      height: 470px;
+      height: 400px;
     }
 
     @include breakpoint(lg) {
-      transform: translate(50%, 50%);
-      height: 375px;
+      transform: translate(50%, 40%);
+      height: 285px;
     }
 
     @include breakpoint(md) {

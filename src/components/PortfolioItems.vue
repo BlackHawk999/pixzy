@@ -83,6 +83,20 @@ export default {
       height: 380px;
       overflow: hidden;
 
+      @include breakpoint(sm) {
+        height: 300px;
+      }
+
+      @include breakpoint(xs) {
+        height: 250px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
       &::after {
         content: "";
         position: absolute;
