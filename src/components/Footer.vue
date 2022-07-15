@@ -319,9 +319,19 @@ export default {};
     display: flex;
     align-items: center;
     gap: 28px;
+  }
 
-    &.geo {
-      gap: 44px;
+  .contact-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 

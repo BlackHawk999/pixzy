@@ -5,50 +5,52 @@
         <p class="header-title">Contact</p>
       </div>
     </div>
-    <div class="contact-details-wrapper">
-      <div class="contact-infos">
-        <div class="adress-wrapper">
-          <div class="adress-icon">
-            <img src="@/assets/img/location-icon.svg" alt="" />
+    <div class="container">
+      <div class="contact-details-wrapper">
+        <div class="contact-infos">
+          <div class="adress-wrapper">
+            <div class="adress-icon">
+              <img src="@/assets/img/location-icon.svg" alt="" />
+            </div>
+            <p class="adress-title">Adress</p>
+            <a
+              class="link"
+              href="http://https://www.google.com/maps/place/%D0%B4%D0%B2%D0%B5%D1%80%D0%B8+elporta/@41.3355118,69.29242,19.92z/data=!4m5!3m4!1s0x38aef545498aaef5:0xc70c624460aad226!8m2!3d41.3356076!4d69.292845"
+              >Tashkent, Qazi Mahalla
+            </a>
           </div>
-          <p class="adress-title">Adress</p>
-          <a
-            class="link"
-            href="http://https://www.google.com/maps/place/%D0%B4%D0%B2%D0%B5%D1%80%D0%B8+elporta/@41.3355118,69.29242,19.92z/data=!4m5!3m4!1s0x38aef545498aaef5:0xc70c624460aad226!8m2!3d41.3356076!4d69.292845"
-            >Tashkent, Qazi Mahalla
-          </a>
-        </div>
-        <div class="adress-wrapper">
-          <div class="adress-icon">
-            <img src="@/assets/img/call-icon.svg" alt="" />
+          <div class="adress-wrapper">
+            <div class="adress-icon">
+              <img src="@/assets/img/call-icon.svg" alt="" />
+            </div>
+            <p class="adress-title">Phone Number</p>
+            <a class="link" href="tel:++998 94 684 38145">+998 94 684 38145</a>
+            <a class="link" href="tel:++998 94 684 38145">+998 94 684 38145</a>
+            <a class="link" href="tel:++998 94 684 38145">+998 94 684 38145</a>
           </div>
-          <p class="adress-title">Phone Number</p>
-          <a class="link" href="tel:++998 94 684 38145">+998 94 684 38145</a>
-          <a class="link" href="tel:++998 94 684 38145">+998 94 684 38145</a>
-          <a class="link" href="tel:++998 94 684 38145">+998 94 684 38145</a>
-        </div>
-        <div class="adress-wrapper">
-          <div class="adress-icon">
-            <img src="@/assets/img/email-icon.svg" alt="" />
+          <div class="adress-wrapper">
+            <div class="adress-icon">
+              <img src="@/assets/img/email-icon.svg" alt="" />
+            </div>
+            <p class="adress-title">Email</p>
+            <a class="link" href="mailto:Info@pixyz.uz">Info@pixyz.uz</a>
           </div>
-          <p class="adress-title">Email</p>
-          <a class="link" href="mailto:Info@pixyz.uz">Info@pixyz.uz</a>
         </div>
-      </div>
-      <div class="getin-touch">
-        <get-in-touch />
-      </div>
-      <div class="contact-maps">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23970.19066160692!2d69.20060567604129!3d41.32465850203895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8d64bfd1b3%3A0x261b8948e4b4e45e!2z0KjQsNC50YXQsNC90YLQsNGF0YPRgNGB0LrQuNC5INGA0LDQudC-0L0sINCi0LDRiNC60LXQvdGCLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1657779546708!5m2!1sru!2s"
-          width="100%"
-          height="700"
-          frameborder="1"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        <div class="getin-touch">
+          <get-in-touch />
+        </div>
+        <div class="contact-maps">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23970.19066160692!2d69.20060567604129!3d41.32465850203895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b8d64bfd1b3%3A0x261b8948e4b4e45e!2z0KjQsNC50YXQsNC90YLQsNGF0YPRgNGB0LrQuNC5INGA0LDQudC-0L0sINCi0LDRiNC60LXQvdGCLCDQo9C30LHQtdC60LjRgdGC0LDQvQ!5e0!3m2!1sru!2s!4v1657779546708!5m2!1sru!2s"
+            width="100%"
+            height="700"
+            frameborder="1"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </div>
   </div>
