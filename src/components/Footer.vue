@@ -164,7 +164,7 @@
                   <span>info@pixyz.com</span>
                 </div>
               </div>
-              <div class="contact-wrapper">
+              <div class="contact-wrapper geo">
                 <div class="contact-icon">
                   <svg
                     width="21"
@@ -281,14 +281,28 @@ export default {};
   }
 
   .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 35px;
     height: 35px;
     padding: 7px;
     border-radius: 50%;
     background: #49d6cb;
+    cursor: pointer;
+    transition: all 0.3s;
     svg {
       width: 100%;
       height: 100%;
+      object-fit: contain;
+    }
+
+    &:hover {
+      background: #ffffff;
+
+      svg path {
+        fill: #49d6cb;
+      }
     }
   }
 
@@ -305,6 +319,10 @@ export default {};
     display: flex;
     align-items: center;
     gap: 28px;
+
+    &.geo {
+      gap: 44px;
+    }
   }
 
   .contact-info {

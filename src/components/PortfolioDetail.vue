@@ -40,8 +40,19 @@ export default {
       left: 0;
       bottom: 0;
       background: #000;
-      opacity: 0.5;
+      opacity: 0;
       z-index: 1;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 0.5;
+        transition: all 0.3s;
+      }
+
+      .detail-title {
+        opacity: 1;
+      }
     }
 
     img {
@@ -61,12 +72,13 @@ export default {
     right: 50%;
     transform: translate(50%, -50%);
     z-index: 2;
+    opacity: 0;
 
     @include breakpoint(md) {
       font-size: 20px;
     }
 
-     @include breakpoint(sm) {
+    @include breakpoint(sm) {
       font-size: 15px;
     }
   }

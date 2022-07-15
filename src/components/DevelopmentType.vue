@@ -200,6 +200,7 @@ export default {
       border-radius: 10px;
       border: none;
       animation: pulse 0.8s infinite;
+      cursor: pointer;
 
       @keyframes pulse {
         0% {

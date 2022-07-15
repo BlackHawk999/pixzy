@@ -160,6 +160,10 @@ export default {};
     flex-direction: column;
   }
 
+  &-body {
+    padding: 100px 0;
+  }
+
   &-title {
     font-family: "Seg-bold";
     font-size: 40px;
